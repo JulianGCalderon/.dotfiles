@@ -21,4 +21,4 @@ if [ -z "$TARGET" ]; then
     exit 0
 fi
 
-nvim $TARGET
+$EDITOR $TARGET
