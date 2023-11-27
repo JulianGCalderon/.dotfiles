@@ -6,5 +6,5 @@ esac
 
 # source all bash files in ~/.bashrc.d/
 for file in ~/.bashrc.d/*.bash; do
-    source “$file”
+    source $file
 done
