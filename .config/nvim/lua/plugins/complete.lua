@@ -53,6 +53,18 @@ local plugin = {
           before = format_entry,
         }),
       },
+      enabled = function()
+        local context = require('cmp.config.context')
+
+        -- keep command mode completion enabled always
+        if vim.api.nvim_get_mode().mode == 'c' then
+          return true
+        end
+
+        -- disable completion if cursor in comment
+        return not context.in_treesitter_capture("comment")
+            and not context.in_syntax_group("Comment")
+      end
     })
   end,
 }
