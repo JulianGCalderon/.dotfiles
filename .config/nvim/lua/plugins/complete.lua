@@ -12,7 +12,6 @@ local plugin = {
     -- snippets
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
-    "rafamadriz/friendly-snippets",
 
     -- formatting
     "onsails/lspkind.nvim",
@@ -21,8 +20,6 @@ local plugin = {
     local cmp = require("cmp")
     local luasnip = require("luasnip")
     local lspkind = require("lspkind")
-
-    require("luasnip.loaders.from_vscode").lazy_load()
 
     cmp.setup({
       preselect = 'None',
@@ -35,11 +32,13 @@ local plugin = {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-n>"] = cmp.mapping.select_next_item(),
+        ["<C-p>"] = cmp.mapping.select_prev_item(),
         ["<C-Space>"] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<CR>'] = cmp.mapping.confirm({ select = false }),
       }),
       sources = cmp.config.sources({
         { name = "luasnip" },
