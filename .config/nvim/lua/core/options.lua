@@ -1,7 +1,7 @@
 -- [[ Settings ]]
 
 -- Line numbers
-vim.wo.number = true
+vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Mouse mode
@@ -22,7 +22,7 @@ vim.opt.timeoutlen = 300
 -- Appearance
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
-vim.wo.signcolumn = 'yes'
+vim.opt.signcolumn = 'yes'
 vim.opt.scrolloff = 8
 vim.opt.breakindent = true
 
