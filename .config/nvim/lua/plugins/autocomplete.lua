@@ -1,13 +1,12 @@
-local format_entry
-
-local plugin = {
+return {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
   dependencies = {
     -- sources
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
-    "hrsh7th/cmp-nvim-lsp-signature-help",
+    "hrsh7th/cmp-nvim-lua",
+    "hrsh7th/cmp-nvim-lsp",
 
     -- snippets
     "L3MON4D3/LuaSnip",
@@ -34,59 +33,27 @@ local plugin = {
       mapping = cmp.mapping.preset.insert({
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-n>"] = cmp.mapping.select_next_item(),
-        ["<C-p>"] = cmp.mapping.select_prev_item(),
-        ["<C-Space>"] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({ select = false }),
+        ["<C-e>"] = cmp.mapping.abort(),
+        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
       }),
       sources = cmp.config.sources({
-        { name = "luasnip" },
+        { name = "nvim_lua" },
         { name = "nvim_lsp" },
         { name = "path" },
-        { name = "buffer" },
-        { name = "nvim_lsp_signature_help" },
+        { name = "luasnip" },
+        { name = "buffer",  keyword_length = 5 },
       }),
       formatting = {
-        fields = { "abbr", "menu", "kind" },
         format = lspkind.cmp_format({
-          before = format_entry,
+          menu = {
+            nvim_lua = "[api]",
+            nvim_lsp = "[LSP]",
+            path = "[path]",
+            luasnip = "[snip]",
+            buffer = "[buf]",
+          },
         }),
       },
-      enabled = function()
-        if not require("cmp.config.default")().enabled() then
-          return false
-        end
-
-        local context = require('cmp.config.context')
-
-        -- keep command mode completion enabled always
-        if vim.api.nvim_get_mode().mode == 'c' then
-          return true
-        end
-
-        -- disable completion if cursor in comment
-        return not context.in_treesitter_capture("comment")
-            and not context.in_syntax_group("Comment")
-      end
     })
   end,
 }
-
-function format_entry(entry, item)
-  local name = entry.source.name
-  if name == "nvim_lsp" then
-    name = "LSP"
-  elseif name == "nvim_lua" then
-    name = "nvim"
-  elseif name == "nvim_lsp_signature_help" then
-    name = "signature"
-    item.kind = ""
-  end
-
-  item.menu = string.format("[%s]", name)
-
-  return item
-end
-
-return plugin
