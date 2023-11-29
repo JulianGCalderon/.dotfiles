@@ -20,11 +20,6 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = "Repeat backwards search" })
 -- Delete without yank
 vim.keymap.set("n", "x", '"_x', { desc = "Delete under cursor" })
 
--- Split management
-vim.keymap.set("n", "<leader>ss", "<C-w>v", { desc = "Split vertical" })
-vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split horizontal" })
-vim.keymap.set("n", "<leader>sx", "<CMD>close<CR>", { desc = "Close current split" })
-
 -- Update current buffer
 vim.keymap.set("n", "<C-s>", "<CMD>up<CR>", { desc = "Save current file" })
 
