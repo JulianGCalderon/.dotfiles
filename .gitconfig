@@ -3,3 +3,5 @@
 	name = Julián González Calderón
 [init]
 	defaultBranch = main
+[push]
+	autoSetupRemote = true
