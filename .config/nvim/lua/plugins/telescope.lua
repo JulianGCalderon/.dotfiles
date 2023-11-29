@@ -22,20 +22,6 @@ return {
     { '<leader>fg',      function() require('telescope.builtin').live_grep() end,   desc = '[F]ind by [G]rep' },
     { '<leader>fd',      function() require('telescope.builtin').diagnostics() end, desc = '[F]ind [D]iagnostics' },
     { '<leader>f?',      function() require('telescope.builtin').oldfiles() end,    desc = '[F]ind recently opened files' },
-
     { '<leader><space>', function() require('telescope.builtin').buffers() end,     desc = 'Find existing buffers' },
-
-    {
-      '<leader>/',
-      function()
-        require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-          prompt_title = "Current Buffer Grep",
-          fuzzy = false,
-          winblend = 10,
-          previewer = false,
-        })
-      end,
-      desc = 'Search in buffer'
-    },
   }
 }

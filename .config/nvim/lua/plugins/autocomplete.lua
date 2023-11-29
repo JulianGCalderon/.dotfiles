@@ -54,6 +54,10 @@ local plugin = {
         }),
       },
       enabled = function()
+        if not require("cmp.config.default")().enabled() then
+          return false
+        end
+
         local context = require('cmp.config.context')
 
         -- keep command mode completion enabled always
