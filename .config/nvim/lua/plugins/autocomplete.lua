@@ -41,7 +41,7 @@ return {
         { name = "nvim_lsp" },
         { name = "path" },
         { name = "luasnip" },
-        { name = "buffer",  keyword_length = 5 },
+        { name = "buffer" },
       }),
       formatting = {
         format = lspkind.cmp_format({

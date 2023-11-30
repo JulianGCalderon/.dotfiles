@@ -4,7 +4,13 @@ return {
     "nvim-lua/plenary.nvim",
     'nvim-telescope/telescope.nvim',
   },
-  opts = {},
+  opts = {
+    keywords = {
+      TEST = {
+        icon = "󰙨"
+      }
+    }
+  },
   keys = {
     { '<leader>fc', ":TodoTelescope<CR>", desc = '[F]ind [C]omments' },
   }
