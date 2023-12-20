@@ -46,10 +46,7 @@ return {
           unusedparams = true,
         },
       },
-      rust_analyzer = {},
-      lua_ls = {},
-      pyright = {},
-      clangd = {},
+
     }
 
     local lspconfig = require("lspconfig")

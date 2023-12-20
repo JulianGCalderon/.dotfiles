@@ -12,9 +12,6 @@ return {
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
 
-    -- language tools
-    "PaterJason/cmp-conjure",
-
     -- formatting
     "onsails/lspkind.nvim",
   },
@@ -42,7 +39,6 @@ return {
       sources = cmp.config.sources({
         { name = "nvim_lua" },
         { name = "nvim_lsp" },
-        { name = "conjure" },
         { name = "path" },
         { name = "luasnip" },
         { name = "buffer" },
@@ -55,7 +51,6 @@ return {
             path = "[path]",
             luasnip = "[snip]",
             buffer = "[buf]",
-            conjure = "[conj]",
           },
         }),
       },
