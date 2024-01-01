@@ -1,17 +1,17 @@
 return {
-  "folke/todo-comments.nvim",
+  'folke/todo-comments.nvim',
   dependencies = {
-    "nvim-lua/plenary.nvim",
+    'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope.nvim',
   },
   opts = {
     keywords = {
       TEST = {
-        icon = "󰙨"
-      }
-    }
+        icon = '󰙨',
+      },
+    },
   },
   keys = {
-    { '<leader>fc', ":TodoTelescope<CR>", desc = '[F]ind [C]omments' },
-  }
+    { '<leader>fc', ':TodoTelescope<CR>', desc = '[F]ind [C]omments' },
+  },
 }

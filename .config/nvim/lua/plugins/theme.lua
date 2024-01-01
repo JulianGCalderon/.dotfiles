@@ -1,11 +1,11 @@
 return {
   {
     'catppuccin/nvim',
-    name = "catppuccin",
+    name = 'catppuccin',
     priority = 1000,
     config = function(_)
-      require("catppuccin").setup({})
-      vim.cmd.colorscheme("catppuccin")
+      require('catppuccin').setup {}
+      vim.cmd.colorscheme 'catppuccin'
     end,
   },
   {
@@ -16,7 +16,7 @@ return {
         theme = 'catppuccin',
         component_separators = '|',
         section_separators = '',
-        globalstatus = "true",
+        globalstatus = 'true',
       },
     },
   },

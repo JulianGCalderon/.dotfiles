@@ -1,1 +1,1 @@
-require("custom.highlight-yank")
+require 'custom.highlight-yank'

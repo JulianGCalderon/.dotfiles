@@ -1,9 +1,9 @@
 return {
   'stevearc/oil.nvim',
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
   lazy = false,
   opts = {},
   keys = {
-    { "-", ":Oil<CR>", desc = "Oil [E]xplorer" }
-  }
+    { '-', ':Oil<CR>', desc = 'Oil [E]xplorer' },
+  },
 }

@@ -8,5 +8,5 @@ return {
       ['<leader>d'] = { name = '[D]iagnostic', _ = 'which_key_ignore' },
       -- ['<leader>s'] = { name = '[S]plit', _ = 'which_key_ignore' },
     }
-  end
+  end,
 }

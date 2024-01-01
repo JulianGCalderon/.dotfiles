@@ -6,7 +6,7 @@ return {
   },
   build = ':TSUpdate',
   opts = {
-    ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "go", "rust" },
+    ensure_installed = { 'c', 'lua', 'vim', 'vimdoc', 'query', 'markdown', 'go', 'rust' },
     highlight = { enable = true },
   },
 }
