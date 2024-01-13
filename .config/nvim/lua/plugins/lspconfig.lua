@@ -1,22 +1,21 @@
 return {
-  -- LSP Configuration & Plugins
   'neovim/nvim-lspconfig',
   dependencies = {
     -- Automatically install LSPs to stdpath for neovim
     { 'williamboman/mason.nvim', opts = {} },
     { 'williamboman/mason-lspconfig.nvim' },
 
-    -- completion capabilities
+    -- Completion capabilities
     'hrsh7th/cmp-nvim-lsp',
 
-    -- language tools
-    { 'folke/neodev.nvim', opts = {} },
-
-    -- pretty progress messages
+    -- Pretty progress messages
     { 'j-hui/fidget.nvim', opts = {} },
 
     -- Telescope for keybindings
     'nvim-telescope/telescope.nvim',
+
+    -- Language tools
+    { 'folke/neodev.nvim', opts = {} },
   },
   config = function(_)
     local servers = {

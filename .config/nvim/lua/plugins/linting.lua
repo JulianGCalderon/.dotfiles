@@ -8,7 +8,7 @@ return {
       python = { 'ruff' },
     }
 
-    local lint_group = vim.api.nvim_create_augroup('lint', { clear = true })
+    local lint_group = vim.api.nvim_create_augroup('nvim-lint', { clear = true })
     vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWritePost', 'InsertLeave' }, {
       group = lint_group,
       callback = function()
