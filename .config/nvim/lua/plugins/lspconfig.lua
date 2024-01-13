@@ -40,7 +40,7 @@ return {
         function(server_name)
           lspconfig[server_name].setup {
             capabilities = capabilities,
-            on_attach = require('plugins.config.lspconfig').on_attach,
+            on_attach = require('util.lsp').on_attach,
             settings = servers[server_name],
             filetypes = (servers[server_name] or {}).filetypes,
           }

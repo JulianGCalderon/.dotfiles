@@ -4,7 +4,8 @@ return {
   opts = {
     server = {
       on_attach = function(client, bufnr)
-        require('plugins.config.lspconfig').on_attach(client, bufnr)
+        require('util.lsp').on_attach(client, bufnr)
+
         local rt = require 'rust-tools'
         local opts = { noremap = true, silent = true, buffer = bufnr }
 

@@ -33,7 +33,6 @@ return {
       mapping = cmp.mapping.preset.insert {
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-e>'] = cmp.mapping.abort(),
         ['<C-y>'] = cmp.mapping.confirm { select = true },
       },
       sources = cmp.config.sources {
