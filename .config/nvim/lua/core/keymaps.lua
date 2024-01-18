@@ -19,7 +19,7 @@ vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Repeat backwards search' })
 vim.keymap.set('n', 'x', '"_x', { desc = 'Delete under cursor' })
 
 -- Update current buffer
-vim.keymap.set('n', '<C-s>', '<CMD>up<CR>', { desc = 'Save current file' })
+vim.keymap.set('n', '<C-s>', ':up<CR>', { desc = 'Save current file' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })

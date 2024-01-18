@@ -2,11 +2,10 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- Mouse mode
-vim.opt.mouse = 'a'
-
--- Undo
+-- Undo (no backups)
 vim.opt.undofile = true
+vim.opt.backup = false
+vim.opt.swapfile = false
 
 -- Search settings
 vim.opt.ignorecase = true
@@ -23,6 +22,8 @@ vim.opt.background = 'dark'
 vim.opt.signcolumn = 'yes'
 vim.opt.scrolloff = 8
 vim.opt.breakindent = true
+vim.opt.colorcolumn = '80'
+vim.opt.updatetime = 50
 
 -- Splitting
 vim.opt.splitright = true

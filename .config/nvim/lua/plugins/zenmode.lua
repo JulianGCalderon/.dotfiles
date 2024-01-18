@@ -6,6 +6,6 @@ return {
     },
   },
   keys = {
-    { '<leader>z', '<cmd>ZenMode<cr>', desc = '[Z]en Mode' },
+    { '<leader>z', ':ZenMode<cr>', desc = '[Z]en Mode' },
   },
 }
