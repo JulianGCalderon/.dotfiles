@@ -5,7 +5,6 @@ return {
     -- sources
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
-    'hrsh7th/cmp-nvim-lua',
     'hrsh7th/cmp-nvim-lsp',
 
     -- snippets
@@ -33,20 +32,17 @@ return {
       mapping = cmp.mapping.preset.insert {
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-e>'] = cmp.mapping.abort(),
         ['<C-y>'] = cmp.mapping.confirm { select = true },
       },
       sources = cmp.config.sources {
-        { name = 'nvim_lua' },
+        { name = 'luasnip' },
         { name = 'nvim_lsp' },
         { name = 'path' },
-        { name = 'luasnip' },
         { name = 'buffer' },
       },
       formatting = {
         format = lspkind.cmp_format {
           menu = {
-            nvim_lua = '[api]',
             nvim_lsp = '[LSP]',
             path = '[path]',
             luasnip = '[snip]',

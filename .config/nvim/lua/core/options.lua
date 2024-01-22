@@ -1,14 +1,11 @@
--- [[ Settings ]]
-
 -- Line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- Mouse mode
-vim.opt.mouse = 'a'
-
--- Undo
+-- Undo (no backups)
 vim.opt.undofile = true
+vim.opt.backup = false
+vim.opt.swapfile = false
 
 -- Search settings
 vim.opt.ignorecase = true
@@ -21,7 +18,7 @@ vim.opt.timeoutlen = 300
 
 -- Appearance
 vim.opt.termguicolors = true
-vim.opt.background = "dark"
+vim.opt.background = 'dark'
 vim.opt.signcolumn = 'yes'
 vim.opt.scrolloff = 8
 vim.opt.breakindent = true
@@ -40,5 +37,5 @@ vim.opt.smartindent = true
 
 -- Format options
 vim.opt.textwidth = 80
-vim.opt.formatoptions:remove("t")
-vim.opt.formatoptions:append("cro")
+vim.opt.formatoptions:remove 't'
+vim.opt.formatoptions:append 'cro'
