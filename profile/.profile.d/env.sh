@@ -2,5 +2,5 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.local/scripts/
 export EDITOR=nvim
