@@ -22,7 +22,7 @@ vim.opt.background = 'dark'
 vim.opt.signcolumn = 'yes'
 vim.opt.scrolloff = 8
 vim.opt.breakindent = true
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = '80'
 
 -- Splitting
 vim.opt.splitright = true
