@@ -1,8 +1,8 @@
 import:
-   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+  - "~/.config/alacritty/themes/themes/tokyo-night.yaml"
 
 window:
-  opacity: 0.9
+  opacity: 1.0
 
 font:
   normal:

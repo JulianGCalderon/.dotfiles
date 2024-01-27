@@ -6,13 +6,9 @@
 # Creditos a: Luke Smith
 
 EXCLUDE='**/.git'
-
-INCLUDE_REC="projects .local/bin .config"
-INCLUDE_BARE="$HOME"
+INCLUDE_REC="projects .dotfiles .config"
 
 REC=$(fdfind . --base-directory ~/. --type f --exclude $EXCLUDE --hidden --absolute-path $INCLUDE_REC)
-BARE=$(fdfind . --base-directory ~/. --exact-depth 1 --type f --hidden --absolute-path $INCLUDE_BARE)
-
 
 ALL="$REC$BARE"
 

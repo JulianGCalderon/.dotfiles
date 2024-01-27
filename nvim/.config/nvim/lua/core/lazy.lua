@@ -17,6 +17,7 @@ require('lazy').setup {
     { import = 'plugins.language-tools' },
     { import = 'plugins.integrations' },
     { import = 'plugins.coding' },
+    { import = 'plugins.themes' },
   },
   install = {
     colorscheme = { 'catppuccin' },

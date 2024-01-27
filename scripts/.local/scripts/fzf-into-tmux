@@ -5,8 +5,8 @@
 #
 # Creditos a: ThePrimeagen
 
-INCLUDE="projects drafts .config"
 EXCLUDE='**/.git'
+INCLUDE="projects drafts .config .dotfiles"
 
 DIRS=$(fdfind . --base-directory ~/. --type d --exclude $EXCLUDE --hidden --absolute-path $INCLUDE)
 if [ -z "$DIRS" ]; then
