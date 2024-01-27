@@ -20,6 +20,6 @@ require('lazy').setup {
     { import = 'plugins.themes' },
   },
   install = {
-    colorscheme = { 'catppuccin' },
+    colorscheme = { 'tokyonight-nigth' },
   },
 }
