@@ -7,3 +7,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = yank_highlight_group,
   pattern = '*',
 })
+
+-- Format on save
+local auto_format_group = vim.api.nvim_create_augroup('AutoFormat', {})
+vim.api.nvim_create_autocmd('BufWritePre', {
+  group = auto_format_group,
+  callback = function()
+    vim.lsp.buf.format { async = false }
+  end,
+})

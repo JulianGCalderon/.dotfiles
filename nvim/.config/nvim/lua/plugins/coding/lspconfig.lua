@@ -8,43 +8,41 @@ return {
     -- Completion capabilities
     'hrsh7th/cmp-nvim-lsp',
 
-    -- Pretty progress messages
-    { 'j-hui/fidget.nvim', opts = {} },
-
     -- Telescope for keybindings
     'nvim-telescope/telescope.nvim',
 
     -- Language tools
     { 'folke/neodev.nvim', opts = {} },
+
+    -- Schemas
+    { 'b0o/schemastore.nvim' },
   },
   config = function(_)
-    local servers = {
-      gopls = {
-        usePlaceholders = true,
-        analyses = {
-          unusedparams = true,
-        },
-      },
-    }
-
     local lspconfig = require 'lspconfig'
     local mason_lspconfig = require 'mason-lspconfig'
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
+    local ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+    if ok then
+      capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
+    end
+
+    local servers = require('util.lsp').servers
 
     mason_lspconfig.setup {
       ensure_installed = vim.tbl_keys(servers),
-      handlers = {
-        function(server_name)
-          lspconfig[server_name].setup {
-            capabilities = capabilities,
-            on_attach = require('util.lsp').on_attach,
-            settings = servers[server_name],
-            filetypes = (servers[server_name] or {}).filetypes,
-          }
-        end,
-      },
+    }
+
+    mason_lspconfig.setup_handlers {
+      function(server_name)
+        lspconfig[server_name].setup {
+          capabilities = capabilities,
+          on_attach = require('util.lsp').on_attach,
+          settings = servers[server_name],
+          filetypes = (servers[server_name] or {}).filetypes,
+        }
+      end,
     }
   end,
 }

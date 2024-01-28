@@ -12,11 +12,12 @@ vim.keymap.set('v', '<', '<gv', { desc = 'Shift selection leftwards' })
 -- Keep cursor on center
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll downward' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll upwards' })
-vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Repeat forward search' })
-vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Repeat backwards search' })
+vim.keymap.set('n', 'n', 'nzz', { desc = 'Repeat forward search' })
+vim.keymap.set('n', 'N', 'Nzz', { desc = 'Repeat backwards search' })
 
 -- Delete without yank
 vim.keymap.set('n', 'x', '"_x', { desc = 'Delete under cursor' })
+vim.keymap.set('x', 'p', '"_dP', { desc = 'Delete under cursor' })
 
 -- Update current buffer
 vim.keymap.set('n', '<C-s>', ':up<CR>', { desc = 'Save current file' })

@@ -23,6 +23,8 @@ vim.opt.signcolumn = 'yes'
 vim.opt.scrolloff = 8
 vim.opt.breakindent = true
 vim.opt.colorcolumn = '80'
+vim.opt.cursorline = true
+vim.opt.laststatus = 3 -- global status line
 
 -- Splitting
 vim.opt.splitright = true
@@ -38,4 +40,7 @@ vim.opt.smartindent = true
 -- Format options
 vim.opt.textwidth = 80
 vim.opt.formatoptions:remove 't'
-vim.opt.formatoptions:append 'cro'
+vim.opt.formatoptions:append 'croq'
+
+-- Autocomplete
+vim.opt.completeopt = 'menuone,noselect'

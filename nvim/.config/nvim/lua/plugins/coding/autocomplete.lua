@@ -1,6 +1,5 @@
 return {
   'hrsh7th/nvim-cmp',
-  event = 'InsertEnter',
   dependencies = {
     -- sources
     'hrsh7th/cmp-buffer',
@@ -21,9 +20,6 @@ return {
 
     cmp.setup {
       preselect = 'None',
-      completion = {
-        completeopt = 'menuone,noselect',
-      },
       snippet = {
         expand = function(args)
           luasnip.lsp_expand(args.body)
