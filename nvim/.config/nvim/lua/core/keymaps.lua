@@ -17,7 +17,6 @@ vim.keymap.set('n', 'N', 'Nzz', { desc = 'Repeat backwards search' })
 
 -- Delete without yank
 vim.keymap.set('n', 'x', '"_x', { desc = 'Delete under cursor' })
-vim.keymap.set('x', 'p', '"_dP', { desc = 'Delete under cursor' })
 
 -- Update current buffer
 vim.keymap.set('n', '<C-s>', ':up<CR>', { desc = 'Save current file' })
