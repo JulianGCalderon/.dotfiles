@@ -2,7 +2,7 @@ return {
   'neovim/nvim-lspconfig',
   dependencies = {
     -- Automatically install LSPs to stdpath for neovim
-    { 'williamboman/mason.nvim', opts = {} },
+    { 'williamboman/mason.nvim',          opts = {} },
     { 'williamboman/mason-lspconfig.nvim' },
 
     -- Completion capabilities
@@ -12,7 +12,7 @@ return {
     'nvim-telescope/telescope.nvim',
 
     -- Language tools
-    { 'folke/neodev.nvim', opts = {} },
+    { 'folke/neodev.nvim',   opts = {} },
 
     -- Schemas
     { 'b0o/schemastore.nvim' },
@@ -30,9 +30,7 @@ return {
 
     local servers = require('util.lsp').servers
 
-    mason_lspconfig.setup {
-      ensure_installed = vim.tbl_keys(servers),
-    }
+    mason_lspconfig.setup {}
 
     mason_lspconfig.setup_handlers {
       function(server_name)
