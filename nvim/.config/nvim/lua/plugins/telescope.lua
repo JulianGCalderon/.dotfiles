@@ -11,8 +11,14 @@ return {
       end,
     },
   },
-  opts = {},
-  config = function(opts)
+  opts = {
+    pickers = {
+      find_files = {
+        hidden = true,
+      },
+    },
+  },
+  config = function(_, opts)
     require('telescope').setup(opts)
     pcall(require('telescope').load_extension, 'fzf')
   end,

@@ -5,15 +5,19 @@
 #
 # Creditos a: ThePrimeagen
 
-EXCLUDE='**/.git'
-INCLUDE="projects drafts .config .dotfiles"
+function join_by {
+  local separator=${1}
+  local first=${2}
+  if shift 2; then
+    printf %s "$first" "${@/#/$separator}"
+  fi
+}
 
-DIRS=$(fdfind . --base-directory ~/. --type d --exclude $EXCLUDE --hidden --absolute-path $INCLUDE)
-if [ -z "$DIRS" ]; then
-    exit 0
-fi
+BASE=(~/projects ~/drafts ~/.dotfiles)
+OPTS="--type directory --full-path --hidden --ignore --exclude .git"
 
-TARGET=$(echo "$DIRS" | fzf)
+DIRS=$(fd $OPTS . $(join_by " " ${BASE[@]}))
+TARGET=$(join_by $'\n' ${BASE[@]} "$DIRS" | fzf)
 if [ -z "$TARGET" ]; then
     exit 0
 fi
