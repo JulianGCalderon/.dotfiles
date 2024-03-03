@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Create or attach to tmux session on zoxide directory
+
+TARGET=$(zoxide query --list | fzf)
+BASENAME=$(basename "$TARGET" | tr . _)
+
+# If there is no active session with folder name, create session
+if ! tmux has-session -t $BASENAME 2> /dev/null; then
+    tmux new-session -ds $BASENAME -c $TARGET
+fi
+
+# If there is an active client, switch session
+if [[ ! -z "$TMUX" ]]; then
+    tmux switch-client -t $BASENAME 2> /dev/null
+else
+    # If not, attach to session
+    tmux attach-session -t $BASENAME 2> /dev/null
+fi
