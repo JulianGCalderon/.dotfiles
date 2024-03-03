@@ -13,9 +13,9 @@ return {
   },
   opts = {
     pickers = {
-      find_files = {
-        hidden = true,
-      },
+      -- find_files = {
+      --   hidden = true,
+      -- },
     },
   },
   config = function(_, opts)
