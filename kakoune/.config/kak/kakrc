@@ -1,0 +1,34 @@
+evaluate-commands %sh{
+	kak-lsp --kakoune --session "$kak_session"
+}
+lsp-enable
+
+colorscheme gruvbox-dark
+
+set-option global tabstop 4
+set-option global indentwidth 4
+
+add-highlighter global/ number-lines -relative -hlcursor
+add-highlighter global/ regex \h+$ 0:Error
+add-highlighter global/ wrap -word -indent
+add-highlighter global/ show-matching
+
+# CLIPBOARD
+
+map -docstring "yank the selection into the clipboard" global user y "<a-|> pbcopy<ret>"
+map -docstring "paste the clipboard" global user p "<a-!> pbpaste<ret>"
+
+# TMUX POPUP
+
+define-command tmux-terminal-popup -params 1.. -docstring '
+tmux-terminal-popup <program> [<arguments>]: create a new terminal as a tmux popup
+The program passed as argument will be executed in the new terminal' \
+%{
+    tmux-terminal-impl 'display-popup -EE' %arg{@}
+}
+complete-command tmux-terminal-popup shell
+
+# FZF
+
+define-command find -docstring "find files" -params 1 %{ edit %arg{1} }
+complete-command find shell-script-candidates %{ fd --type f --follow .}
