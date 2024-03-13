@@ -39,8 +39,7 @@ vim.opt.smartindent = true
 
 -- Format options
 vim.opt.textwidth = 80
-vim.opt.formatoptions:remove 't'
-vim.opt.formatoptions:append 'croq'
+vim.opt.formatoptions = 'crqj'
 
 -- Autocomplete
 vim.opt.completeopt = 'menuone,noselect'
