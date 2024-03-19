@@ -67,3 +67,4 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(zoxide init zsh)"
 alias zt="zoxide-tmux"
+alias e=$EDITOR
