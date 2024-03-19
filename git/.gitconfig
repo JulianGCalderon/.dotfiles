@@ -7,3 +7,5 @@
 	autoSetupRemote = true
 [core]
 	autocrlf = input
+[pull]
+	rebase = true
