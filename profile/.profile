@@ -3,6 +3,5 @@
 #umask 022
 
 export PATH=$PATH:~/.local/scripts/
-export EDITOR=kak
 
 . "$HOME/.cargo/env"
