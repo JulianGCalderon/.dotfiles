@@ -7,6 +7,15 @@ auto-save = true
 auto-format = true
 rulers = [80]
 
+[editor.soft-wrap]
+enable = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
 [editor.statusline]
 left = [
   "mode",
@@ -16,9 +25,3 @@ left = [
   "file-modification-indicator",
   "version-control",
 ]
-
-[editor.cursor-shape]
-insert = "bar"
-
-[editor.file-picker]
-hidden = false
