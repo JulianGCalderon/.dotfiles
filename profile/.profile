@@ -6,3 +6,4 @@ export PATH=$PATH:~/.local/scripts/
 export EDITOR=hx
 
 . "$HOME/.cargo/env"
+export PATH=$PATH:~/go/bin
