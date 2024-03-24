@@ -1,4 +1,4 @@
-super_nnn()
+nnn()
 {
     # Block nesting of nnn in subshells
     [ "${NNNLVL:-0}" -eq 0 ] || {

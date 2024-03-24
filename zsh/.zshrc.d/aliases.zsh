@@ -1,3 +1,3 @@
 alias e=$EDITOR
-alias n="super_nnn -e"
+alias n="nnn -e"
 alias lg="lazygit"
