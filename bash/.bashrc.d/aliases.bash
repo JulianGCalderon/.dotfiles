@@ -5,8 +5,3 @@ which notify-send &> /dev/null && alias alert='notify-send --urgency=low -i "$([
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
-alias fp="fzf-into-tmux"
-alias ff="fzf-into-edit"
-alias python="python3"
-
