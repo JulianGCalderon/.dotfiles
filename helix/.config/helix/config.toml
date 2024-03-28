@@ -25,3 +25,7 @@ left = [
   "file-modification-indicator",
   "version-control",
 ]
+
+[keys.normal.space]
+f = "file_picker_in_current_directory"
+F = "file_picker"
