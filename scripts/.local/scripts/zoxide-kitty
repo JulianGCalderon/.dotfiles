@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Create or attach to tmux session on zoxide directory
+
+ROOT_DIRECTORY=$(zoxide query --list | fzf)
+BASENAME=$(basename "$ROOT_DIRECTORY")
+
+open -a kitty.app -n --args \
+  --title $BASENAME \
+  --directory $ROOT_DIRECTORY
