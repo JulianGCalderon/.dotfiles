@@ -26,6 +26,9 @@ left = [
   "version-control",
 ]
 
+[editor.lsp]
+display-inlay-hints = true
+
 [keys.normal.space]
 f = "file_picker_in_current_directory"
 F = "file_picker"
