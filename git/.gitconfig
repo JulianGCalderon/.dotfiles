@@ -1,12 +1,13 @@
 [user]
 	email = gonzalezcalderonjulian@gmail.com
 	name = Julián González Calderón
+[core]
+	autocrlf = input
+	pager = less -FXR
+
 [init]
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
-[core]
-	autocrlf = input
-	pager = less -FXR
 [pull]
 	rebase = true
