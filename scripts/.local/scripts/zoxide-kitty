@@ -2,7 +2,7 @@
 #
 # Create or attach to tmux session on zoxide directory
 
-export PWD=$(zoxide query --list | fzf)
+export KITTY_PWD=$(zoxide query --list | fzf)
 BASENAME=$(basename "$PWD")
 
 open -a kitty.app -n --args \
