@@ -4,13 +4,16 @@
 
 PWD="$HOME/vaults/journal.md"
 mkdir -p "$PWD"
+cd "$PWD" || exit
 
-if [ "$1" = "" ]
+TARGET=$1
+
+if [ "$TARGET" = "" ]
 then
    DATE=$(date "+%y-%m-%d")
    TARGET="daily/$DATE.md"
 else
-   TARGET="$1.md"
+   TARGET="$TARGET.md"
 fi
 
-(cd "$PWD" && hx "$TARGET")
+hx "$TARGET"
