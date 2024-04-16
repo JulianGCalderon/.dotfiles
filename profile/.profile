@@ -2,7 +2,7 @@
 # for ssh logins, install and configure the libpam-umask package.
 # umask 022
 
-export PATH=$PATH:~/.local/scripts/
+export PATH=$PATH:~/.local/scripts
 export PATH=$PATH:~/go/bin
 
 [ -e "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
