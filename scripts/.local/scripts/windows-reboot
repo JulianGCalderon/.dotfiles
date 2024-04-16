@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # Reinicia la computaodra, estableciendo windows por defecto en grub (unica vez)
 
