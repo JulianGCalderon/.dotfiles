@@ -2,9 +2,11 @@
 #
 # Create or attach to tmux session on zoxide directory
 
-export KITTY_PWD=$(zoxide query --list | fzf)
-BASENAME=$(basename "$PWD")
+KITTY_PWD="$(zoxide query --list | fzf)"
+BASENAME=$(basename "$KITTY_PWD")
+
+export KITTY_PWD
 
 open -a kitty.app -n --args \
-  --title $BASENAME \
-  --session $HOME/.config/kitty/default.session
+  --title "$BASENAME" \
+  --session "$HOME/.config/kitty/default.session"
