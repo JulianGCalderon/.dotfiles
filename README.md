@@ -11,5 +11,5 @@ stow <package>
 To uninstall a given package, run:
 
 ```sh
-stow --delete <package>
+stow -D <package>
 ```
