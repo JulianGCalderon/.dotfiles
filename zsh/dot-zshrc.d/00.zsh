@@ -18,4 +18,8 @@ precmd () {
   PROMPT+="%{$reset_color%}"
 }
 
+# HISTORY
+
+HISTSIZE=10000
+SAVEHIST=10000
 export COLORTERM=truecolor
