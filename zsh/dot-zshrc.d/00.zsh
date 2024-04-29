@@ -10,9 +10,11 @@ precmd () {
 
   PROMPT="%{$fg[green]%}%~ "
   [[ -n $vcs_info_msg_0_ ]] && {
-      [[ -n $(git status --porcelain) ]] && {
+      if [[ -n $(git status --porcelain) ]]; then
         GIT_STATUS=" %{$fg[red]%}✗%{$fg[blue]%}"
-      }
+      else
+        GIT_STATUS=""
+      fi
       PROMPT+="%{$fg[blue]%}($vcs_info_msg_0_$GIT_STATUS) "
   }
   PROMPT+="%{$reset_color%}"
