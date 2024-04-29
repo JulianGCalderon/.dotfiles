@@ -3,7 +3,7 @@ nnn-wrapper()
     # Block nesting of nnn in subshells
     [ "${NNNLVL:-0}" -eq 0 ] || {
         echo "nnn is already running" >&2 
-        return
+        return -1
     }
 
     # If set, `nnn` writes a `cd` the current working directory.
