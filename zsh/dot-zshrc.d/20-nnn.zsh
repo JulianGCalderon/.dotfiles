@@ -14,7 +14,7 @@ nnn-wrapper()
 
     command nnn "$@"
 
-    [ ! -f "$NNN_TMPFILE" ] || {
+    [ -f "$NNN_TMPFILE" ] && {
         . "$NNN_TMPFILE"
         rm -f -- "$NNN_TMPFILE" > /dev/null
     }
