@@ -22,4 +22,14 @@ precmd () {
 
 HISTSIZE=10000
 SAVEHIST=10000
+
+# AUTOCOMPLETE
+
+zstyle ':completion:*' menu select
+zstyle ':completion:*' special-dirs true
+zmodload zsh/complist
+
+autoload -U compinit && compinit
+_comp_options+=(globdots)
+
 export COLORTERM=truecolor
