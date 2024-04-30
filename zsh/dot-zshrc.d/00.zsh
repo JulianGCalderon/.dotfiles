@@ -32,4 +32,6 @@ _comp_options+=(globdots)
 autoload edit-command-line && zle -N edit-command-line
 bindkey '^e' edit-command-line
 
+bindkey -s '^o' "^Unnn-cd^M"
+
 export COLORTERM=truecolor
