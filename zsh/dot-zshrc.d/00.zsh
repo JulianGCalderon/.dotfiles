@@ -27,4 +27,9 @@ zmodload zsh/complist
 autoload -U compinit && compinit
 _comp_options+=(globdots)
 
+# Keybindings
+
+autoload edit-command-line && zle -N edit-command-line
+bindkey '^e' edit-command-line
+
 export COLORTERM=truecolor
