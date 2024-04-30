@@ -12,7 +12,7 @@ nnn-cd()
     # To `cd` quit only on ^G, don't export and use the default path:
     # NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
 
-    command nnn "$@"
+    command nnn -e "$@"
 
     [ -f "$NNN_TMPFILE" ] && {
         source "$NNN_TMPFILE"
