@@ -9,10 +9,10 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' formats "%{%F{blue}%}(%b%u%c%{%F{blue}%}) "
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr "%{%F{red}%}?"
-zstyle ':vcs_info:*' stagedstr "%{%F{yellow}%}!"
+zstyle ':vcs_info:*' stagedstr "%{%F{green}%}!"
 
 precmd () {  vcs_info }
-PROMPT='%{$fg[green]%}%~ $vcs_info_msg_0_%{$reset_color%}'
+PROMPT='%{$fg[yellow]%}%~ $vcs_info_msg_0_%{$reset_color%}'
 
 # HISTORY
 
@@ -22,7 +22,6 @@ SAVEHIST=10000
 # AUTOCOMPLETE
 
 zstyle ':completion:*' menu select
-zstyle ':completion:*' special-dirs true
 zmodload zsh/complist
 
 autoload -U compinit && compinit
