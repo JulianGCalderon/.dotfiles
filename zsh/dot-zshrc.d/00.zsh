@@ -34,4 +34,6 @@ bindkey '^e' edit-command-line
 
 bindkey -s '^o' "^Unnn-cd^M"
 
+# Miscellaneous
+
 export COLORTERM=truecolor
