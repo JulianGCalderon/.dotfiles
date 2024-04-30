@@ -6,7 +6,7 @@ autoload -Uz vcs_info
 setopt PROMPT_SUBST
 
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' formats '%{%F{blue}%}(%b%u%c%{%F{blue}%}) '
+zstyle ':vcs_info:*' formats '%{%F{blue}%}(%b%u%c%{%F{blue}%})%{%f%} '
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '%{%F{red}%}?'
 zstyle ':vcs_info:*' stagedstr '%{%F{green}%}!'
