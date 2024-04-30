@@ -2,23 +2,17 @@
 
 autoload -U colors && colors
 autoload -Uz vcs_info
+
+setopt PROMPT_SUBST
+
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' formats "%b"
+zstyle ':vcs_info:*' formats "%{%F{blue}%}(%b%u%c%{%F{blue}%}) "
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr "%{%F{red}%}?"
+zstyle ':vcs_info:*' stagedstr "%{%F{yellow}%}!"
 
-precmd () { 
-  vcs_info
-
-  PROMPT="%{$fg[green]%}%~ "
-  [[ -n $vcs_info_msg_0_ ]] && {
-      if [[ -n $(git status --porcelain) ]]; then
-        GIT_STATUS=" %{$fg[red]%}✗%{$fg[blue]%}"
-      else
-        GIT_STATUS=""
-      fi
-      PROMPT+="%{$fg[blue]%}($vcs_info_msg_0_$GIT_STATUS) "
-  }
-  PROMPT+="%{$reset_color%}"
-}
+precmd () {  vcs_info }
+PROMPT='%{$fg[green]%}%~ $vcs_info_msg_0_%{$reset_color%}'
 
 # HISTORY
 
