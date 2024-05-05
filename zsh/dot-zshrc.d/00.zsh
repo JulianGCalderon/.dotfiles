@@ -16,8 +16,10 @@ PROMPT='%{$fg[yellow]%}%~ $vcs_info_msg_0_%{$reset_color%}'
 
 # HISTORY
 
+HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+setopt appendhistory
 
 # AUTOCOMPLETE
 
