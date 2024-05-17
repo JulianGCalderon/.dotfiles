@@ -11,3 +11,9 @@
 	autoSetupRemote = true
 [pull]
 	rebase = true
+
+[alias]
+	co = checkout
+	l = pull
+	p = push
+	f = fetch
