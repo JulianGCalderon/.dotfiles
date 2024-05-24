@@ -5,6 +5,8 @@ line-number = "relative"
 cursorline = true
 auto-save = true
 auto-format = true
+completion-timeout = 5
+popup-border = "all"
 
 [editor.soft-wrap]
 enable = true

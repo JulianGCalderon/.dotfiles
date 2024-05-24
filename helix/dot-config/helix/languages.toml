@@ -3,6 +3,10 @@ name = "typescript"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 
+[[language]]
+name = "tsx"
+auto-format = true
+
 [language-server.typescript-language-server.config.typescript.inlayHints]
 includeInlayEnumMemberValueHints = false
 includeInlayFunctionLikeReturnTypeHints = false
@@ -11,3 +15,6 @@ includeInlayParameterNameHints = "none"
 includeInlayParameterNameHintsWhenArgumentMatchesName = false
 includeInlayPropertyDeclarationTypeHints = false
 includeInlayVariableTypeHints = false
+
+[language-server.rust-analyzer.config]
+cargo = { features = "all" }
