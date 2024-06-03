@@ -18,3 +18,7 @@ includeInlayVariableTypeHints = false
 
 [language-server.rust-analyzer.config]
 cargo = { features = "all" }
+
+[[language]]
+name = "elixir"
+auto-format = true
