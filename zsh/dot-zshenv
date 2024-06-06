@@ -8,3 +8,4 @@ export EDITOR=hx
 [ -e "$HOME/.foundry/bin" ] && export PATH="$PATH:$HOME/.foundry/bin"
 [ -e "$HOME/.go/bin" ] && export PATH="$PATH:$HOME/.go/bin"
 [ -e "/opt/homebrew/opt/asdf/libexec/asdf.sh" ] && source "/opt/homebrew/opt/asdf/libexec/asdf.sh"
+[ -e "$HOME/.asdf/asdf.sh" ] && source "$HOME/.asdf/asdf.sh"
