@@ -18,3 +18,5 @@
 	p  = push
 	f  = fetch
 	st = status
+[merge]
+	conflictStyle = zdiff3
