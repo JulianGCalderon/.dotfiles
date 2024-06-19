@@ -1,3 +1,10 @@
+[language-server.rust-analyzer.config]
+cargo = { features = "all" }
+
+[[language]]
+name = "elixir"
+auto-format = true
+
 [[language]]
 name = "typescript"
 auto-format = true
@@ -17,9 +24,9 @@ includeInlayParameterNameHintsWhenArgumentMatchesName = false
 includeInlayPropertyDeclarationTypeHints = false
 includeInlayVariableTypeHints = false
 
-[language-server.rust-analyzer.config]
-cargo = { features = "all" }
-
 [[language]]
-name = "elixir"
+name = "python"
 auto-format = true
+
+[language-server]
+pylsp = { command = "python3", args = [ "-m", "pylsp" ] }
