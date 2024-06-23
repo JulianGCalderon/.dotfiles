@@ -9,4 +9,5 @@ esac
 
 [ -e "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
+# treat login shell as non-login shell
 [[ -r ~/.bashrc ]] && source "$HOME/.bashrc"
