@@ -5,22 +5,22 @@
 
 # ignore if is not interactive
 [[ $- == *i* ]] || {
-    return
+  return
 }
 
 
 # ignore if parent is fish
 case $(uname) in
-    Darwin*)
-        [[ $(ps -p $PPID  -o comm=) != "fish" ]] || {
-            return
-        }
-    ;;
-    Linux*)
-        [[ $(ps --pid=$PPID --no-header --format=comm) != "fish" ]] || {
-            return
-        }
-    ;;
+  Darwin*)
+    [[ $(ps -p $PPID  -o comm=) != "fish" ]] || {
+      return
+    }
+  ;;
+  Linux*)
+    [[ $(ps --pid=$PPID --no-header --format=comm) != "fish" ]] || {
+      return
+    }
+  ;;
 esac
 
 
