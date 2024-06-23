@@ -10,13 +10,13 @@
 
 
 # ignore if parent is fish
-case "$OSTYPE" in
-    darwin*)
+case $(uname) in
+    Darwin*)
         [[ $(ps -p $PPID  -o comm=) != "fish" ]] || {
             return
         }
     ;;
-    linux*)
+    Linux*)
         [[ $(ps --pid=$PPID --no-header --format=comm) != "fish" ]] || {
             return
         }
