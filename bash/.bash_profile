@@ -1,6 +1,8 @@
 export EDITOR=hx
 export XDG_CONFIG_HOME="$HOME/.config"
 
+export PATH="$PATH:$HOME/.local/bin"
+
 case $(uname) in
   Darwin)
     [ -e "/opt/homebrew/bin/brew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
