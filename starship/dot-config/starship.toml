@@ -57,6 +57,7 @@ symbol = "docker "
 
 [elixir]
 symbol = "exs "
+format = "via [$symbol]($style)"
 
 [elm]
 symbol = "elm "
