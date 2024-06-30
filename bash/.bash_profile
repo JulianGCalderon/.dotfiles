@@ -1,7 +1,8 @@
 export EDITOR=hx
 export XDG_CONFIG_HOME="$HOME/.config"
 
-export PATH="$PATH:$HOME/.local/bin"
+[ -d "$HOME/bin" ] && export PATH="$PATH:$HOME/bin"
+[ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
 
 case $(uname) in
   Darwin)
