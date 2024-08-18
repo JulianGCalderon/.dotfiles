@@ -3,10 +3,11 @@ theme = "tokyonight"
 [editor]
 line-number = "relative"
 cursorline = true
+popup-border = "all"
 auto-save = true
 auto-format = true
 completion-timeout = 5
-popup-border = "all"
+completion-replace = true
 
 [editor.soft-wrap]
 enable = true
@@ -31,6 +32,4 @@ left = [
 display-inlay-hints = true
 
 [keys.normal.space]
-f = "file_picker_in_current_directory"
-F = "file_picker"
 i = ":toggle lsp.display-inlay-hints"
