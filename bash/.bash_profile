@@ -21,7 +21,6 @@ esac
 command -v pyenv > /dev/null || {
   export PYENV_ROOT="$HOME/.pyenv"
   append_path "$PYENV_ROOT/bin"
-  eval "$(pyenv init -)"
 }
 
 # cargo
