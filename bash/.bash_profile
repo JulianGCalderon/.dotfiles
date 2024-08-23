@@ -1,8 +1,12 @@
+function append_path() {
+  export PATH="$PATH:$1"
+}
+
 export EDITOR=hx
 export XDG_CONFIG_HOME="$HOME/.config"
 
-[ -d "$HOME/bin" ] && export PATH="$PATH:$HOME/bin"
-[ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
+append_path "$HOME/bin"
+append_path "$HOME/.local/bin"
 
 case $(uname) in
   Darwin)
@@ -10,7 +14,18 @@ case $(uname) in
   ;;
 esac
 
-[ -e "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+# aligned
+[[ -d "$HOME/.aligned/bin" ]] && append_path "$HOME/.aligned/bin" 
+
+# pyenv
+command -v pyenv > /dev/null || {
+  export PYENV_ROOT="$HOME/.pyenv"
+  append_path "$PYENV_ROOT/bin"
+  eval "$(pyenv init -)"
+}
+
+# cargo
+[[ -e "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
 # treat login shell as non-login shell
 [[ -r ~/.bashrc ]] && source "$HOME/.bashrc"
