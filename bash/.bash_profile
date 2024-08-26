@@ -14,6 +14,9 @@ case $(uname) in
   ;;
 esac
 
+# go
+[[ -d "$HOME/.go" ]] && append_path "$HOME/.go/bin"
+
 # aligned
 [[ -d "$HOME/.aligned/bin" ]] && append_path "$HOME/.aligned/bin" 
 
