@@ -1,9 +1,22 @@
+# rust
+
 [language-server.rust-analyzer.config]
 cargo = { features = "all" }
+
+# elixir
 
 [[language]]
 name = "elixir"
 auto-format = true
+
+# python
+
+[[language]]
+name = "python"
+auto-format = true
+language-servers = ["pylsp"]
+
+# javascript
 
 [[language]]
 name = "typescript"
@@ -24,9 +37,3 @@ includeInlayParameterNameHintsWhenArgumentMatchesName = false
 includeInlayPropertyDeclarationTypeHints = false
 includeInlayVariableTypeHints = false
 
-[[language]]
-name = "python"
-auto-format = true
-
-[language-server]
-pylsp = { command = "python3", args = [ "-m", "pylsp" ] }
