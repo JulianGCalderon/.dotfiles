@@ -14,11 +14,12 @@ case $(uname) in
   ;;
 esac
 
-# go
-[[ -d "$HOME/.go" ]] && append_path "$HOME/.go/bin"
+# cargo
+[[ -e "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
-# aligned
-[[ -d "$HOME/.aligned/bin" ]] && append_path "$HOME/.aligned/bin" 
+# go
+[[ -d "/usr/local/go" ]] && append_path "/usr/local/go/bin"
+[[ -d "$HOME/.go" ]] && append_path "$HOME/.go/bin"
 
 # pyenv
 command -v pyenv > /dev/null || {
@@ -26,8 +27,8 @@ command -v pyenv > /dev/null || {
   append_path "$PYENV_ROOT/bin"
 }
 
-# cargo
-[[ -e "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
+# aligned
+[[ -d "$HOME/.aligned/bin" ]] && append_path "$HOME/.aligned/bin"
 
 # treat login shell as non-login shell
 [[ -r ~/.bashrc ]] && source "$HOME/.bashrc"
