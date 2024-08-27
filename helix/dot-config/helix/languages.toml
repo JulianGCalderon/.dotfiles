@@ -3,6 +3,13 @@
 [language-server.rust-analyzer.config]
 cargo = { features = "all" }
 
+# go
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
+
 # elixir
 
 [[language]]
