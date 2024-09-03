@@ -21,7 +21,7 @@ auto-format = true
 [[language]]
 name = "python"
 auto-format = true
-language-servers = ["pylsp"]
+language-servers = [ "pyright" ]
 
 # javascript
 
