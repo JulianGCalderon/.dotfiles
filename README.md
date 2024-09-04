@@ -2,14 +2,30 @@
 
 Here, my collection of my unix configuration files as packages, managed by `stow`. The `XDG_CONFIG_HOME` environment variable should be set to `~/.config`.
 
-To install a given package, run:
+## Dependencies
 
+- `stow`: For installing packages
+- `git`: For updating submodules
+- [Just](https://github.com/casey/just): For running commands
+
+## Usage
+
+To initialize submodules, run:
 ```sh
-stow <package>
+just init
+```
+
+To install all packages, run:
+```sh
+just install-all
+```
+
+To install a given package, run:
+```sh
+just install <package>
 ```
 
 To uninstall a given package, run:
-
 ```sh
-stow -D <package>
+just uninstall <package>
 ```
