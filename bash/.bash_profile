@@ -30,5 +30,9 @@ command -v pyenv > /dev/null || {
 # aligned
 [[ -d "$HOME/.aligned/bin" ]] && append_path "$HOME/.aligned/bin"
 
+# dprint
+export DPRINT_INSTALL="$HOME/.dprint"
+append_path "$DPRINT_INSTALL/bin"
+
 # treat login shell as non-login shell
 [[ -r ~/.bashrc ]] && source "$HOME/.bashrc"
