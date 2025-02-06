@@ -8,7 +8,7 @@ cargo = { features = "all" }
 [[language]]
 name = "go"
 auto-format = true
-formatter = { command = "goimports" }
+formatter = { command = "gofmt" }
 
 # elixir
 
@@ -16,12 +16,22 @@ formatter = { command = "goimports" }
 name = "elixir"
 auto-format = true
 
+# racket
+
+[[language]]
+name = "racket"
+auto-format = true
+
 # python
 
 [[language]]
 name = "python"
 auto-format = true
-language-servers = [ "pyright" ]
+language-servers = [ "pyright", "ruff" ]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
 
 # javascript
 
@@ -44,3 +54,10 @@ includeInlayParameterNameHintsWhenArgumentMatchesName = false
 includeInlayPropertyDeclarationTypeHints = false
 includeInlayVariableTypeHints = false
 
+[[language]]
+name = "markdown"
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
+
+[[language]]
+name = "cpp"
+auto-format = true
