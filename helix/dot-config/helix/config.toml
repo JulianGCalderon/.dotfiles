@@ -37,3 +37,7 @@ display-inlay-hints = true
 
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
+
+[keys.normal.space.m]
+o = [":open ~/.config/matemode/materound", ":write!"]
+m = ":sh matemode"
