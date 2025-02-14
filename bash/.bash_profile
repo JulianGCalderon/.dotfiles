@@ -27,9 +27,6 @@ command -v pyenv > /dev/null || {
   append_path "$PYENV_ROOT/bin"
 }
 
-# aligned
-[[ -d "$HOME/.aligned/bin" ]] && append_path "$HOME/.aligned/bin"
-
 # dprint
 export DPRINT_INSTALL="$HOME/.dprint"
 append_path "$DPRINT_INSTALL/bin"
