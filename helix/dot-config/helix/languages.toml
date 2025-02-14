@@ -61,3 +61,7 @@ formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
 [[language]]
 name = "cpp"
 auto-format = true
+
+[[language]]
+name = "bash"
+indent = { tab-width = 2, unit = "\t" }
