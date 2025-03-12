@@ -21,12 +21,6 @@ esac
 [[ -d "/usr/local/go" ]] && append_path "/usr/local/go/bin"
 [[ -d "$HOME/.go" ]] && append_path "$HOME/.go/bin"
 
-# pyenv
-command -v pyenv > /dev/null || {
-  export PYENV_ROOT="$HOME/.pyenv"
-  append_path "$PYENV_ROOT/bin"
-}
-
 # dprint
 export DPRINT_INSTALL="$HOME/.dprint"
 append_path "$DPRINT_INSTALL/bin"
