@@ -1,9 +1,6 @@
 [user]
 	email = gonzalezcalderonjulian@gmail.com
 	name = Julián González Calderón
-[core]
-	autocrlf = input
-	pager = less -FXR
 
 [init]
 	defaultBranch = main
@@ -11,7 +8,12 @@
 	autoSetupRemote = true
 [pull]
 	rebase = true
+[commit]
+    gpgsign = true
 
+[core]
+	autocrlf = input
+	pager = less -FXR
 [alias]
 	co = checkout
 	l  = pull
@@ -20,3 +22,5 @@
 	st = status
 [merge]
 	conflictStyle = zdiff3
+[gpg]
+	format = ssh
