@@ -11,6 +11,7 @@ append_path "$HOME/.local/bin"
 case $(uname) in
   Darwin)
     [ -e "/opt/homebrew/bin/brew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+    [ -e "$HOME/.bitwarden-ssh-agent.sock" ] && export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
   ;;
 esac
 
