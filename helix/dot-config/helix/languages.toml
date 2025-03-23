@@ -65,3 +65,11 @@ auto-format = true
 [[language]]
 name = "bash"
 indent = { tab-width = 2, unit = "\t" }
+
+[[language]]
+name = "cairo"
+language-servers = [ "cairo-language-server" ]
+
+[language-server.cairo-language-server]
+command = "scarb"
+args = ["cairo-language-server"]
