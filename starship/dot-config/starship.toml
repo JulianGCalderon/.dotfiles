@@ -18,6 +18,6 @@ deleted = "x"
 [package]
 disabled = true
 [python]
-disabled = true
+symbol = "py "
 [rust]
 disabled = true
