@@ -73,3 +73,12 @@ language-servers = [ "cairo-language-server" ]
 [language-server.cairo-language-server]
 command = "scarb"
 args = ["cairo-language-server"]
+
+[[language]]
+name = "concrete"
+scope = "source.con"
+injection-regex = "concrete"
+file-types = ["con"]
+comment-tokens = "//"
+indent = { tab-width = 4, unit = "    " }
+grammar = "rust"
