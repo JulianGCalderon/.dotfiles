@@ -5,3 +5,4 @@ end
 zoxide init fish | source
 starship init fish | source
 direnv hook fish | source
+pyenv init - | source
