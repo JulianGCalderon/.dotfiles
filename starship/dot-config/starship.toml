@@ -21,3 +21,5 @@ disabled = true
 symbol = "py "
 [rust]
 disabled = true
+[nodejs]
+disabled = true
