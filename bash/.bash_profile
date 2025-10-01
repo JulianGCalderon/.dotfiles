@@ -15,12 +15,11 @@ case $(uname) in
   ;;
 esac
 
-# cargo
 [[ -e "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
-
-# go
 [[ -d "/usr/local/go" ]] && append_path "/usr/local/go/bin"
 [[ -d "$HOME/.go" ]] && append_path "$HOME/.go/bin"
+[[ -d "$HOME/.juliaup/bin" ]] && append_path "$HOME/.juliaup/bin"
+[[ -d "$HOME/.config/.starkli" ]] && . "$HOME/.config/.starkli/env"
 
 # pyenv
 command -v pyenv > /dev/null || {
