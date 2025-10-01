@@ -1,7 +1,8 @@
 # rust
 
 [language-server.rust-analyzer.config]
-cargo = { features = "all" }
+check = { command = "clippy" }
+cargo = { features = "all", "allTargets" = true }
 
 # go
 
@@ -45,14 +46,10 @@ name = "tsx"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "typescript"] }
 
-[language-server.typescript-language-server.config.typescript.inlayHints]
-includeInlayEnumMemberValueHints = false
-includeInlayFunctionLikeReturnTypeHints = false
-includeInlayFunctionParameterTypeHints = false
-includeInlayParameterNameHints = "none"
-includeInlayParameterNameHintsWhenArgumentMatchesName = false
-includeInlayPropertyDeclarationTypeHints = false
-includeInlayVariableTypeHints = false
+[[language]]
+name = "astro"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "astro"] }
 
 [[language]]
 name = "markdown"
@@ -82,3 +79,25 @@ file-types = ["con"]
 comment-tokens = "//"
 indent = { tab-width = 4, unit = "    " }
 grammar = "rust"
+formatter = { command = "rustfmt" }
+
+[[language]]
+name = "latex"
+language-servers = [ "texlab", "ltex-ls" ]
+
+[language-server.texlab.config.texlab.build]
+executable = "tectonic"
+args = [
+  "-X",
+  "compile",
+  "%f",
+  "--synctex",
+  "--keep-logs",
+  "--keep-intermediates",
+]
+onSave = true
+forwardSearchAfter = true
+
+[language-server.texlab.config.texlab.forwardSearch]
+executable = "/Applications/Skim.app/Contents/SharedSupport/displayline"
+args = ["-r", "-g", "%l", "%p", "%f"]
