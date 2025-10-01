@@ -23,9 +23,5 @@ case $(uname) in
   ;;
 esac
 
-
-# get login option
-shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=''
-
 # execute fish
-exec fish $LOGIN_OPTION 
+exec fish -i
