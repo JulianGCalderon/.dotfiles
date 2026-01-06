@@ -14,9 +14,6 @@ case $(uname) in
     # brew
     [ -e "/opt/homebrew/bin/brew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-    # bitwarden
-    [ -e "$HOME/.bitwarden-ssh-agent.sock" ] && export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
-
   ;;
 esac
 
