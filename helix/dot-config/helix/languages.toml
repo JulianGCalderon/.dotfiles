@@ -1,29 +1,19 @@
-# rust
-
 [language-server.rust-analyzer.config]
 check = { command = "clippy" }
 cargo = { features = "all", "allTargets" = true }
 
-# go
-
 [[language]]
 name = "go"
 auto-format = true
-formatter = { command = "gofmt" }
-
-# elixir
+formatter = { command = "goimports" }
 
 [[language]]
 name = "elixir"
 auto-format = true
 
-# racket
-
 [[language]]
 name = "racket"
 auto-format = true
-
-# python
 
 [[language]]
 name = "python"
@@ -33,8 +23,6 @@ language-servers = [ "pyright", "ruff" ]
 [language-server.ruff]
 command = "ruff"
 args = ["server"]
-
-# javascript
 
 [[language]]
 name = "typescript"
@@ -70,34 +58,3 @@ language-servers = [ "cairo-language-server" ]
 [language-server.cairo-language-server]
 command = "scarb"
 args = ["cairo-language-server"]
-
-[[language]]
-name = "concrete"
-scope = "source.con"
-injection-regex = "concrete"
-file-types = ["con"]
-comment-tokens = "//"
-indent = { tab-width = 4, unit = "    " }
-grammar = "rust"
-formatter = { command = "rustfmt" }
-
-[[language]]
-name = "latex"
-language-servers = [ "texlab", "ltex-ls" ]
-
-[language-server.texlab.config.texlab.build]
-executable = "tectonic"
-args = [
-  "-X",
-  "compile",
-  "%f",
-  "--synctex",
-  "--keep-logs",
-  "--keep-intermediates",
-]
-onSave = true
-forwardSearchAfter = true
-
-[language-server.texlab.config.texlab.forwardSearch]
-executable = "/Applications/Skim.app/Contents/SharedSupport/displayline"
-args = ["-r", "-g", "%l", "%p", "%f"]
