@@ -2,9 +2,17 @@ if not status is-interactive
     return
 end
 
-zoxide init fish | source
-starship init fish | source
-direnv hook fish | source
+if type -q zoxide
+    zoxide init fish | source
+end
+
+if type -q starship
+    starship init fish | source
+end
+
+if type -q direnv
+    direnv hook fish | source
+end
 
 # ASDF configuration code
 if test -z $ASDF_DATA_DIR
