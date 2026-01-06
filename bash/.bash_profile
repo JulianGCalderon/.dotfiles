@@ -10,15 +10,27 @@ append_path "$HOME/.local/bin"
 
 case $(uname) in
   Darwin)
+
+    # brew
     [ -e "/opt/homebrew/bin/brew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+    # bitwarden
     [ -e "$HOME/.bitwarden-ssh-agent.sock" ] && export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
+
   ;;
 esac
 
+# cargo
 [[ -e "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
+
+# go
 [[ -d "/usr/local/go" ]] && append_path "/usr/local/go/bin"
 [[ -d "$HOME/.go" ]] && append_path "$HOME/.go/bin"
+
+# julia
 [[ -d "$HOME/.juliaup/bin" ]] && append_path "$HOME/.juliaup/bin"
+
+# starkli
 [[ -d "$HOME/.config/.starkli" ]] && . "$HOME/.config/.starkli/env"
 
 # pyenv
