@@ -8,22 +8,11 @@
 	autoSetupRemote = true
 [pull]
 	rebase = true
-[commit]
-	gpgsign = true
+[merge]
+	conflictStyle = zdiff3
 
-[core]
-	autocrlf = input
-	pager = less -FXR
 [alias]
 	co = checkout
 	l  = pull
 	p  = push
-	f  = fetch
 	st = status
-[merge]
-	conflictStyle = zdiff3
-
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign

@@ -1,6 +1,4 @@
 #!/bin/sh
-#
-# Opens the specified jorunal note, or a daily note if no arguments are provided.
 
 PWD="$HOME/vaults/journal.md"
 mkdir -p "$PWD"

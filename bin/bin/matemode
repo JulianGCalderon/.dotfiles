@@ -1,15 +1,11 @@
 #!/bin/sh
 #
-# A matemode CLI, can be integrated to Helix or Kakoune
+# A matemode CLI, can be integrated to Helix or Kakoune.
 # Inspired by mate-mode emacs plugin, by https://github.com/lima-limon-inc
 #
-# # Usage
-#
 # Create a new file at ~/.config/matemode/materound. The parent folder can be
-# customized with the MATEMODE_PATH env var.
-#
-# The materound file should contain the round members in order,
-# delimited with newline characters.
+# customized with the MATEMODE_PATH env var. The materound file should contain
+# the round members in order, delimited with newline characters.
 #
 # ```
 # Simon
@@ -20,15 +16,6 @@
 #
 # Running the script will output the next member in the round,
 # updating the materound file.
-#
-# # Helix Integration
-#
-# To integrate with helix, add the following configuration:
-# ```toml
-# [keys.normal.space.m]
-# o = [":open ~/.config/matemode/materound", ":write!"]
-# m = ":sh matemode"
-# ```
 
 : "${MATEMODE_PATH:=$HOME/.config/matemode}"
 

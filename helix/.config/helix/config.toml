@@ -1,0 +1,12 @@
+theme = "base16_default"
+
+[editor]
+auto-save = true
+true-color = true
+popup-border = "all"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.cursor-shape]
+insert = "bar"

@@ -4,10 +4,11 @@ main() {
   MARKER="([A-Z])"
   OTHER="([^A-Z])"
 
-  # Convert CamelCase to camel_case
+  # Convert CamelCase to Camel_Case
   sed -r "s/$OTHER$MARKER/\1_\2/g" |
-  # Convert CCase to c_case
+  # Convert CCase to C_Case
   sed -r "s/$MARKER$MARKER$OTHER/\1_\2\3/g" |
+
   tr '[:upper:]' '[:lower:]'
 }
 
@@ -19,4 +20,3 @@ fi
 main <<EOF
 $1
 EOF
-
