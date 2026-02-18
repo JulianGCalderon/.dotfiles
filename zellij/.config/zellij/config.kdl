@@ -3,6 +3,7 @@ default_shell "fish"
 show_release_notes false
 show_startup_tips false
 simplified_ui true
+// pane_frames false
 theme "ansi"
 
 keybinds clear-defaults=true {
