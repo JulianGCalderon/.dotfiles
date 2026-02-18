@@ -5,6 +5,9 @@ auto-save = true
 true-color = true
 popup-border = "all"
 
+[editor.lsp]
+display-inlay-hints = true
+
 [editor.soft-wrap]
 enable = true
 
