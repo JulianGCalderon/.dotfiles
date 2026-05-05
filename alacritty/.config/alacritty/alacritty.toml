@@ -3,3 +3,4 @@ shell = { program = "/opt/homebrew/bin/fish", args = ["--login"] }
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+size = 15
