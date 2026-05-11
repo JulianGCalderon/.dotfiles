@@ -8,3 +8,6 @@ set -x PATH "$HOME/.opencode/bin" $PATH
 if type -q starship
     starship init fish | source
 end
+if type -q zoxide
+    zoxide init fish | source
+end
