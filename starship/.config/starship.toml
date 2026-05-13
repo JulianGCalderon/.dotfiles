@@ -27,6 +27,10 @@ disabled = true
 disabled = true
 [golang]
 symbol = "go "
+[java]
+symbol = "java "
+[maven]
+symbol = "maven "
 
 [battery]
 full_symbol = "full "
