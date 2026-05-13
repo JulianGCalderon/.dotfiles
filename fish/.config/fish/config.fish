@@ -1,6 +1,7 @@
 set -x EDITOR hx
 set -x PATH /usr/local/go/bin $PATH
 set -x PATH "$HOME/bin" $PATH
+set -x PATH "$HOME/.local/bin" $PATH
 set -x PATH "$HOME/.cargo/bin" $PATH
 set -x PATH "$HOME/.go/bin" $PATH
 set -x PATH "$HOME/.opencode/bin" $PATH
@@ -10,4 +11,7 @@ if type -q starship
 end
 if type -q zoxide
     zoxide init fish | source
+end
+if type -q direnv
+    direnv hook fish | source
 end
